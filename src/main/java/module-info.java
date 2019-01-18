@@ -22,7 +22,7 @@
  *
  */
 
-module be.yildizgames.module.database {
+module be.yildizgames.module.database.pool.hikari {
     requires java.sql;
     requires java.naming;
     requires java.desktop;
@@ -34,6 +34,5 @@ module be.yildizgames.module.database {
     requires slf4j.api;
     requires com.zaxxer.hikari;
 
-    exports be.yildizgames.module.database;
-    exports be.yildizgames.module.database.data;
+    requires be.yildizgames.module.database;
 }

@@ -24,4 +24,4 @@
 #
 #
 
-be.yildizgames.module.database.pool.C3P0ConnectionProviderRegisterer
+be.yildizgames.module.database.pool.HikariConnectionProviderRegisterer
