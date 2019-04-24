@@ -43,35 +43,35 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * @author Grégory Van den Borre
  */
-class C3P0ConnectionProviderTest {
+public class C3P0ConnectionProviderTest {
 
     @Nested
-    class Constructor {
+    public class Constructor {
 
         @Test
-        void happyFlow() throws Exception {
+        public void happyFlow() throws Exception {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
             try(DataBaseConnectionProvider p = new C3P0ConnectionProvider(new DummySystem(), properties)) {
             }
         }
 
         @Test
-        void withNullSystem() throws SQLException {
+        public void withNullSystem() throws SQLException {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
             assertThrows(ImplementationException.class, () -> new C3P0ConnectionProvider(null, properties));
         }
 
         @Test
-        void withNullProperties() throws SQLException {
+        public void withNullProperties() throws SQLException {
             assertThrows(ImplementationException.class, () -> new C3P0ConnectionProvider(new DummySystem(), null));
         }
     }
 
     @Nested
-    class GetConnection {
+    public class GetConnection {
 
         @Test
-        void happyFlow() throws Exception {
+        public void happyFlow() throws Exception {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
             try(DataBaseConnectionProvider p = new C3P0ConnectionProvider(new DummySystem(), properties)) {
                 assertNotNull(p.getConnection());
@@ -80,10 +80,10 @@ class C3P0ConnectionProviderTest {
     }
 
     @Nested
-    class Close {
+    public class Close {
 
         @Test
-        void happyFlow() throws Exception {
+        public void happyFlow() throws Exception {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
             DataBaseConnectionProvider p = new C3P0ConnectionProvider(new DummySystem(), properties);
             p.getConnection();
