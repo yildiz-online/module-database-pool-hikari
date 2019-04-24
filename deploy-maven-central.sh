@@ -11,6 +11,8 @@ OSSRH_USER_TOKEN=$(echo $SECRETS | jq -r '.data.OSSRH_USER_TOKEN')
 SONAR=$(echo $SECRETS | jq -r '.data.SONAR')
 SONAR_ORGANIZATION=$(echo $SECRETS | jq -r '.data.SONAR_ORGANIZATION')
 
+echo "$SONAR_ORGANIZATION"
+
 echo "Building $BRANCH branch"
 
 if [ "$BRANCH" = "develop" ]; then
