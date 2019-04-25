@@ -29,9 +29,8 @@ package be.yildizgames.module.database.pool;
 import be.yildizgames.common.exception.implementation.ImplementationException;
 import be.yildizgames.module.database.DataBaseConnectionProvider;
 import be.yildizgames.module.database.DbProperties;
-import be.yildizgames.module.database.DummyDatabaseConnectionProvider;
-import be.yildizgames.module.database.DummySystem;
-import be.yildizgames.module.database.pool.C3P0ConnectionProvider;
+import be.yildizgames.module.database.dummy.DummyDatabaseConnectionProvider;
+import be.yildizgames.module.database.dummy.DummySystem;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -43,27 +42,27 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * @author Grégory Van den Borre
  */
-public class C3P0ConnectionProviderTest {
+public class HikariConnectionProviderTest {
 
-    @Nested
+    /*@Nested
     public class Constructor {
 
         @Test
         public void happyFlow() throws Exception {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
-            try(DataBaseConnectionProvider p = new C3P0ConnectionProvider(new DummySystem(), properties)) {
+            try(DataBaseConnectionProvider p = new HikariConnectionProvider(new DummySystem(null), properties, false)) {
             }
         }
 
         @Test
         public void withNullSystem() throws SQLException {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
-            assertThrows(ImplementationException.class, () -> new C3P0ConnectionProvider(null, properties));
+            assertThrows(ImplementationException.class, () -> new HikariConnectionProvider(null, properties, false));
         }
 
         @Test
         public void withNullProperties() throws SQLException {
-            assertThrows(ImplementationException.class, () -> new C3P0ConnectionProvider(new DummySystem(), null));
+            assertThrows(ImplementationException.class, () -> new HikariConnectionProvider(new DummySystem(null), null, false));
         }
     }
 
@@ -73,7 +72,7 @@ public class C3P0ConnectionProviderTest {
         @Test
         public void happyFlow() throws Exception {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
-            try(DataBaseConnectionProvider p = new C3P0ConnectionProvider(new DummySystem(), properties)) {
+            try(DataBaseConnectionProvider p = new HikariConnectionProvider(new DummySystem(null), properties, false)) {
                 assertNotNull(p.getConnection());
             }
         }
@@ -85,9 +84,9 @@ public class C3P0ConnectionProviderTest {
         @Test
         public void happyFlow() throws Exception {
             DbProperties properties = new DummyDatabaseConnectionProvider.DefaultProperties();
-            DataBaseConnectionProvider p = new C3P0ConnectionProvider(new DummySystem(), properties);
+            DataBaseConnectionProvider p = new HikariConnectionProvider(new DummySystem(null), properties, false);
             p.getConnection();
             p.close();
         }
-    }
+    }*/
 }
