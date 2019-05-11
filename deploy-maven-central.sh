@@ -4,7 +4,7 @@ SECRETS=$(curl -sS -H "X-Vault-Token: $VAULT_TOKEN" -X GET https://vault.yildiz-
 
 #Some variables need to be exported as env variable to be used by external processes.
 
-GH_TOKEN=$(echo $SECRETS | jq -r '.data.GH_TOKEN')
+export GH_TOKEN=$(echo $SECRETS | jq -r '.data.GH_TOKEN')
 OPENSSL_PWD=$(echo $SECRETS | jq -r '.data.OPENSSL_PWD')
 export GPG_KEY=$(echo $SECRETS | jq -r '.data.GPG_KEY')
 export GPG_PWD=$(echo $SECRETS | jq -r '.data.GPG_PWD')
