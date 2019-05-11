@@ -4,8 +4,6 @@ SECRETS=$(curl -sS -H "X-Vault-Token: $VAULT_TOKEN" -X GET https://vault.yildiz-
 
 GH_TOKEN=$(echo $SECRETS | jq -r '.data.GH_TOKEN')
 OPENSSL_PWD=$(echo $SECRETS | jq -r '.data.OPENSSL_PWD')
-OSSRH_PWD_TOKEN=$(echo $SECRETS | jq -r '.data.OSSRH_PWD_TOKEN')
-OSSRH_USER_TOKEN=$(echo $SECRETS | jq -r '.data.OSSRH_USER_TOKEN')
 SONAR=$(echo $SECRETS | jq -r '.data.SONAR')
 SONAR_ORGANIZATION=$(echo $SECRETS | jq -r '.data.SONAR_ORGANIZATION')
 
