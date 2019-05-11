@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "<<<<<<<<<<<<<<<<<<<<<"
+echo $GPG_KEY
+echo ">>>>>>>>>>>>>>>>>>>>>"
+
 SECRETS=$(curl -sS -H "X-Vault-Token: $VAULT_TOKEN" -X GET https://vault.yildiz-games.be/v1/kv/yildiz-engine)
 
 GH_TOKEN=$(echo $SECRETS | jq -r '.data.GH_TOKEN')
