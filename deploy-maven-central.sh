@@ -3,8 +3,6 @@
 SECRETS=$(curl -sS -H "X-Vault-Token: $VAULT_TOKEN" -X GET https://vault.yildiz-games.be/v1/kv/yildiz-engine)
 
 GH_TOKEN=$(echo $SECRETS | jq -r '.data.GH_TOKEN')
-GPG_KEY=$(echo $SECRETS | jq -r '.data.GPG_KEY')
-GPG_PWD=$(echo $SECRETS | jq -r '.data.GPG_PWD')
 OPENSSL_PWD=$(echo $SECRETS | jq -r '.data.OPENSSL_PWD')
 OSSRH_PWD_TOKEN=$(echo $SECRETS | jq -r '.data.OSSRH_PWD_TOKEN')
 OSSRH_USER_TOKEN=$(echo $SECRETS | jq -r '.data.OSSRH_USER_TOKEN')
