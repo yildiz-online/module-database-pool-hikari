@@ -26,19 +26,6 @@
 
 package be.yildizgames.module.database.pool;
 
-import be.yildizgames.common.exception.implementation.ImplementationException;
-import be.yildizgames.module.database.DataBaseConnectionProvider;
-import be.yildizgames.module.database.DbProperties;
-import be.yildizgames.module.database.dummy.DummyDatabaseConnectionProvider;
-import be.yildizgames.module.database.dummy.DummySystem;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
-
-import java.sql.SQLException;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 /**
  * @author Grégory Van den Borre
  */
