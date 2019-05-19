@@ -31,6 +31,9 @@ import be.yildizgames.module.database.DataBaseConnectionProvider;
 import be.yildizgames.module.database.DatabaseSystem;
 import be.yildizgames.module.database.DbProperties;
 
+/**
+ * @author Grégory Van den Borre
+ */
 public class HikariConnectionProviderRegisterer implements ConnectionProviderRegisterer {
 
     @Override

@@ -35,6 +35,9 @@ import com.zaxxer.hikari.HikariDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * @author Grégory Van den Borre
+ */
 public class HikariConnectionProvider extends DataBaseConnectionProvider {
 
     private final HikariDataSource ds;
