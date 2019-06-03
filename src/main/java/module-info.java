@@ -31,7 +31,6 @@ module be.yildizgames.module.database.pool.hikari {
     requires be.yildizgames.common.logging;
     requires be.yildizgames.common.exception;
 
-    requires slf4j.api;
     requires com.zaxxer.hikari;
 
     requires be.yildizgames.module.database;
