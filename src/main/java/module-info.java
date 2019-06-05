@@ -24,12 +24,7 @@
 
 module be.yildizgames.module.database.pool.hikari {
     requires java.sql;
-    requires java.naming;
-    requires java.desktop;
-
-    requires be.yildizgames.common.util;
-    requires be.yildizgames.common.logging;
-    requires be.yildizgames.common.exception;
+    requires java.xml;
 
     requires com.zaxxer.hikari;
 
