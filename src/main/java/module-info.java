@@ -27,6 +27,7 @@ module be.yildizgames.module.database.pool.hikari {
     requires java.xml;
 
     requires com.zaxxer.hikari;
+    requires org.slf4j;
 
     requires be.yildizgames.module.database;
 }

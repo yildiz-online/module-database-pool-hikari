@@ -57,7 +57,7 @@
     <dependency>
       <groupId>be.yildiz-games</groupId>
       <artifactId>module-database</artifactId>
-      <version>3.2.5</version>
+      <version>3.3.0</version>
     </dependency>
     <dependency>
       <groupId>javax.annotation</groupId>
@@ -74,6 +74,11 @@
           <artifactId>slf4j-api</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.9</version>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
